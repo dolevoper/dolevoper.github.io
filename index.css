@@ -4,6 +4,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .center {
@@ -20,6 +21,34 @@ body {
     flex-direction: row;
 }
 
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.row .col-5 {
+    grid-column-start: 5;
+}
+
+.row .col-9 {
+    grid-column-start: 9;
+}
+
+.row .col-span-2 {
+    grid-column-end: span 2;
+}
+
+.row .col-span-4 {
+    grid-column-end: span 4;
+}
+
+.card {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    padding: 1em;
+}
+
 h1 {
     text-align: center;
     font-size: 3em;
@@ -29,13 +58,24 @@ a {
     color: #435dad;
 }
 
-#avatar {
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#avatar .picture {
+    margin: 0 auto;
     background-image: url('./assets/avatar.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 20vw;
     height: 20vw;
     border-radius: 100%;
+}
+
+#avatar p {
+    height: fit-content;
+    margin: auto 0;
 }
 
 #links {
@@ -47,4 +87,19 @@ a {
 #links span i {
     vertical-align: middle;
     margin-right: 0.3em;
+}
+
+#featured {
+    width: 60vw;
+    margin: 2em auto;
+    min-height: 10vh;
+}
+
+#featured .picture {
+    background: url("https://secure.meetupstatic.com/photos/event/2/c/3/b/highres_490151323.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: calc(20vw * 9 / 16);
+    margin-right: 2em;
 }
