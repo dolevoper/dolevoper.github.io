@@ -99,7 +99,13 @@ p {
     background: url("https://secure.meetupstatic.com/photos/event/2/c/3/b/highres_490151323.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 20vw;
-    height: calc(20vw * 9 / 16);
+    min-width: 20vw;
+    min-height: calc(20vw * 9 / 16);
     margin-right: 2em;
+}
+
+#featured p {
+    height: fit-content;
+    margin: auto 0;
+    font-size: 1.2em;
 }
