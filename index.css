@@ -71,11 +71,13 @@ p {
     width: 20vw;
     height: 20vw;
     border-radius: 100%;
+    animation: fade-in 1.5s;
 }
 
 #avatar p {
     height: fit-content;
     margin: auto 0;
+    animation: fade-in 1.5s, fly-in 1s;
 }
 
 @media all and (max-width: 1190px) {
@@ -103,6 +105,7 @@ p {
 
 #social-links {
     margin-top: 2em;
+    animation: fly-in 1s;
 }
 
 #social-links span:not(:first-of-type) {
@@ -128,6 +131,7 @@ p {
     width: 60vw;
     margin: 2em auto;
     min-height: 10vh;
+    animation: fade-in 1.5s;
 }
 
 #featured .picture {
@@ -157,4 +161,14 @@ p {
         margin-right: 0;
         margin-bottom: 1.2em;
     }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fly-in {
+    from { transform: translateX(-50px); }
+    to { transform: translateX(0); }
 }
