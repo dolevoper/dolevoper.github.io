@@ -14,7 +14,7 @@
         <h1>DOLEVOPER</h1>
         <div id="avatar" class="row">
             <div class="col-5 col-span-4">
-                <div class="picture"></div>
+                <div class="picture wait-for-load"></div>
             </div>
             <p class="col-9 col-span-2">
                 I'm Omer Dolev, a professional Fullstack Developer, currently working @ WalkMe. Programming is my passion, I love learning new stuff, experimenting with new technologies and writing beautiful code.
@@ -31,7 +31,7 @@
                 <a href="mailto:omerdolev90@gmail.com"><i class="fas fa-envelope-square"></i>omerdolev90@gmail.com</a>
             </span>
         </div>
-        <div id="featured" class="card stack-horizontal">
+        <div id="featured" class="card stack-horizontal wait-for-load">
             <div class="picture"></div>
             <p>
                 Join me on my next talk: Common JavaScript Patterns (Hebrew)<br />
@@ -41,6 +41,13 @@
     </div>
 
     <script src="https://kit.fontawesome.com/920e181d9d.js" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', function () {
+            const waitingElements = document.querySelectorAll('.wait-for-load');
+
+            waitingElements.forEach(el => el.classList.remove('wait-for-load'));
+        });
+    </script>
 </body>
 
 </html>

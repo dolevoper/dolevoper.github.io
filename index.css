@@ -49,6 +49,10 @@ body {
     padding: 1em;
 }
 
+.wait-for-load {
+    animation-play-state: paused !important;
+}
+
 h1 {
     text-align: center;
     font-size: 3em;
