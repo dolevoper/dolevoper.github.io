@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.stack-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.stack-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+a {
+    color: #435dad;
+}
+
+#avatar {
+    background-image: url('./assets/avatar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+}
+
+#links {
+    margin-top: 2em;
+    width: 60vw;
+    justify-content: space-around;
+}
+
+#links span i {
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
