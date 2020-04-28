@@ -49,8 +49,24 @@ body {
     padding: 1em;
 }
 
-.wait-for-load {
+.pos-anchor {
+    position: relative;
+}
+
+.wait-for-load * {
     animation-play-state: paused !important;
+    pointer-events: none;
+}
+
+.wait-for-load::before {
+    content: 'Loading...';
+    position: absolute;
+    width: 10vw;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    left: calc(50% - 5vw);
+    top: 50%;
 }
 
 h1 {
