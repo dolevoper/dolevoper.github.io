@@ -1,10 +1,14 @@
+html {
+    font-size: 20px;
+}
+
 body {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 0 2rem 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
     color: rgba(0, 0, 0, 0.7);
+    background: #f3f3f3;
 }
 
 .center {
@@ -44,9 +48,9 @@ body {
 }
 
 .card {
+    background: #ffffff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
     border-radius: 3px;
-    padding: 1em;
 }
 
 .pos-anchor {
@@ -62,17 +66,27 @@ body {
     content: 'Loading...';
     position: absolute;
     width: 10vw;
-    height: 2em;
+    height: 2rem;
     text-align: center;
-    line-height: 2em;
+    line-height: 2rem;
     left: calc(50% - 5vw);
     top: 50%;
 }
 
 h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 3rem;
     color: #f9b774;
+}
+
+h2 {
+    margin: 1.5rem 3rem;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
 }
 
 a {
@@ -82,6 +96,12 @@ a {
 p {
     margin: 0;
     padding: 0;
+}
+
+header {
+    min-height: 100vh;
+    background: #ffffff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 #avatar .picture {
@@ -108,7 +128,7 @@ p {
     }
 
     #avatar .picture {
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
     }
 
     #avatar p {
@@ -125,17 +145,18 @@ p {
 }
 
 #social-links {
-    margin-top: 2em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     animation: fly-in 1s;
 }
 
 #social-links span:not(:first-of-type) {
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 #social-links span i {
     vertical-align: middle;
-    margin-right: 0.3em;
+    margin-right: 0.3rem;
 }
 
 @media all and (max-width: 790px) {
@@ -150,7 +171,7 @@ p {
 
 #featured {
     width: 60vw;
-    margin: 2em auto;
+    margin: 0 auto;
     min-height: 10vh;
     animation: fade-in 1.5s;
 }
@@ -159,15 +180,16 @@ p {
     background: url("https://secure.meetupstatic.com/photos/event/2/c/3/b/highres_490151323.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    min-width: 20vw;
-    min-height: calc(20vw * 9 / 16);
-    margin-right: 2em;
+    min-width: 25vw;
+    min-height: calc(25vw * 9 / 16);
+    border-radius: 3px 0 0 3px;
 }
 
 #featured p {
     height: fit-content;
     margin: auto 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    padding: 1rem;
 }
 
 @media all and (max-width: 1010px) {
@@ -180,8 +202,16 @@ p {
         min-height: 0;
         padding-top: calc(100% * 9 / 16);
         margin-right: 0;
-        margin-bottom: 1.2em;
+        margin-bottom: 1.2rem;
     }
+}
+
+#latest-talk {
+    width: 560px;
+}
+
+#latest-talk p {
+    padding: 0 1rem 1rem 1rem;
 }
 
 @keyframes fade-in {
