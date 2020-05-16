@@ -171,9 +171,7 @@ header {
 }
 
 #attention-grabber {
-    position: absolute;
-    top: calc(100vh - 4rem);
-    left: calc(50% - 1rem);
+    margin-top: auto;
     font-size: 3rem;
     animation: bounce 2s ease infinite;
 }
