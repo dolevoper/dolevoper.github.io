@@ -169,6 +169,14 @@ header {
     }
 }
 
+#attention-grabber {
+    position: absolute;
+    top: calc(100vh - 4rem);
+    left: calc(50% - 1rem);
+    font-size: 3rem;
+    animation: bounce 2s ease infinite;
+}
+
 #featured {
     width: 60vw;
     margin: 0 auto;
@@ -222,4 +230,11 @@ header {
 @keyframes fly-in {
     from { transform: translateX(-50px); }
     to { transform: translateX(0); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-1rem); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(0); }
 }
