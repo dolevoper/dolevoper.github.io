@@ -90,6 +90,11 @@ h3 {
     margin: 1rem;
 }
 
+h4 {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
 a {
     color: #435dad;
     fill: #435dad;
@@ -192,18 +197,16 @@ header {
 }
 
 #featured .picture {
-    background: url("https://secure.meetupstatic.com/photos/event/2/c/3/b/highres_490151323.jpeg");
+    background: url("https://miro.medium.com/max/788/0*e2PavwnhxXlD0eun");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     min-width: 25vw;
     min-height: calc(25vw * 9 / 16);
     border-radius: 3px 0 0 3px;
 }
 
-#featured p {
-    height: fit-content;
-    margin: auto 0;
-    font-size: 1.2rem;
+#featured .content {
     padding: 1rem;
 }
 
@@ -221,16 +224,20 @@ header {
     }
 }
 
-#latest-talk {
+.talk {
     min-width: 50vw;
 }
 
-#latest-talk .video-container {
+.talk:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.talk .video-container {
     position: relative;
     padding-top: 56.25%;
 }
 
-#latest-talk .video-container iframe {
+.talk .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -238,7 +245,7 @@ header {
     height: 100%;
 }
 
-#latest-talk p {
+.talk p {
     padding: 0 1rem 1rem 1rem;
 }
 
