@@ -92,6 +92,7 @@ h3 {
 
 a {
     color: #435dad;
+    fill: #435dad;
 }
 
 p {
@@ -155,7 +156,9 @@ header {
     margin-left: 1rem;
 }
 
-#social-links span i {
+#social-links span svg {
+    width: 1rem;
+    height: 1rem;
     vertical-align: middle;
     margin-right: 0.3rem;
 }
@@ -172,12 +175,13 @@ header {
 
 #attention-grabber {
     margin-top: auto;
-    font-size: 3rem;
     animation: bounce 2s ease infinite;
 }
 
-#attention-grabber a {
-    color: #f9b774;
+#attention-grabber svg {
+    width: 3rem;
+    height: 3rem;
+    fill: #f9b774;
 }
 
 #featured {
