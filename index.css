@@ -113,9 +113,10 @@ header {
 
 #avatar .picture {
     margin: 0 auto;
-    background-image: url('./assets/avatar.jpg');
+    background-image: url('./assets/_B3A0083.JPG');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 20vw;
     height: 20vw;
     border-radius: 100%;
