@@ -1,5 +1,8 @@
 name: deploy
-on: [push]
+on:
+  push:
+    branches:
+      - development
 jobs:
   deploy-to-pages:
     runs-on: ubuntu-latest
