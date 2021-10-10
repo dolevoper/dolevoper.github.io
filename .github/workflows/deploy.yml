@@ -10,7 +10,6 @@ jobs:
           node-version: "14"
       - run: npm i
       - run: npm run build
-      - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/dolevoper/dolevoper.github.io.git
+      - run: npx gh-pages -d public -b test -u "Omer Dolev <omerdolev90@gmail.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npx gh-pages -d public -u "Omer Dolev <omerdolev90@gmail.com>"
