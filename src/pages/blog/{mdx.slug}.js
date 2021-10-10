@@ -11,7 +11,7 @@ const BlogPostPage = ({ data, location }) => {
     const image = getImage(frontmatter.hero_image);
 
     return (
-        <Layout title={frontmatter.title} path={location.pathname} description={frontmatter.description} image={frontmatter.hero_image.childImageSharp.fixed.src} type="article">
+        <Layout title={frontmatter.title} path={location.pathname} description={frontmatter.description} image={frontmatter.hero_image?.childImageSharp.fixed.src} type="article">
             <main className={container}>
                 <article className={post}>
                     <h2>{frontmatter.title}</h2>
