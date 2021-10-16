@@ -1,14 +1,18 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout";
 import ExternalLink from "../../components/externalLink";
-import { container, post, heroImage } from "./post.module.css";
+import { container, post, heroImage, links, next, top, prev } from "./post.module.css";
 
 const BlogPostPage = ({ data, location }) => {
-    const { frontmatter, body } = data.mdx;
+    const { frontmatter, body, slug } = data.mdx;
     const image = getImage(frontmatter.hero_image);
+
+    const currPostIndex = data.allMdx.nodes.findIndex(post => post.slug === slug);
+    const nextPost = data.allMdx.nodes[currPostIndex + 1];
+    const prevPost = data.allMdx.nodes[currPostIndex - 1];
 
     return (
         <Layout title={frontmatter.title} path={location.pathname} description={frontmatter.description} image={frontmatter.hero_image?.childImageSharp.fixed.src} type="article">
@@ -31,6 +35,13 @@ const BlogPostPage = ({ data, location }) => {
                         {body}
                     </MDXRenderer>
                 </article>
+                <nav className={links}>
+                    <ul>
+                        {nextPost && <li className={next}><Link to={`/blog/${nextPost.slug}`}>{nextPost.frontmatter.title} →</Link></li>}
+                        <li className={top}><Link to="#">Back to top</Link></li>
+                        {prevPost && <li className={prev}><Link to={`/blog/${prevPost.slug}`}>← {prevPost.frontmatter.title}</Link></li>}
+                    </ul>
+                </nav>
             </main>
         </Layout>
     );
@@ -56,6 +67,15 @@ export const query = graphql`
                 }
             }
             body
+            slug
+        }
+        allMdx(sort: {fields: frontmatter___date, order: ASC}, filter: {frontmatter: {unlisted: {ne: true}}}) {
+            nodes {
+                slug
+                frontmatter {
+                    title
+                }
+            }
         }
     }
 `;

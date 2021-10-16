@@ -14,6 +14,19 @@
     max-height: 60vh;
 }
 
+.links ul {
+    list-style: none;
+    text-align: center;
+}
+
+@media (min-width: 55em) {
+    .links ul {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
 @media (min-width: 76em) {
     .container {
         width: 60vw;
